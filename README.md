@@ -3,6 +3,8 @@ rss_crawl rss爬虫
 
 A crawl for rss websites. The more websites the better.
 
+### LICENSE: GPL V2
+
 
 ### requirements:  
 python 2.7  
