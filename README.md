@@ -11,8 +11,15 @@ Twisted==13.1.0
 MySQL-python==1.2.4
 
 
-### how to use:  
-* Create the database via the sql.sql file  
+### how to use:
+* config the database vie the rss_spider/settings.py file
+
+        HOST = ""
+        DB = ""
+        USER = ""
+        PASSWD = ""
+
+* create the database via the sql.sql file  
 
 * init the table rss_urls via the script in the script folder:  
 
@@ -47,13 +54,19 @@ you can autostart the spider, for example:
 
 
 ### interface:
-I also write a website using clojure for handling the infomation downing from these rss sources. I will open source it some day.
-
-
-
-
-
+I also write a website using Clojure for handling the infomation downing from these rss sources. I will open source it some day.
+  
+  
+  
+  
+  
 ### 如何使用：
+* 通过rss_spider/settings.py配置数据库
+
+        HOST = ""
+        DB = ""
+        USER = ""
+        PASSWD = ""
 * 通过sql.sql这个文件来初始化数据库。
 
 * 通过script文件夹下的脚本来初始化rss_urls这个表。
@@ -84,7 +97,7 @@ I also write a website using clojure for handling the infomation downing from th
         28 * * * * /home/name/work/rss_spider/script/./stop_spider.py
         30 * * * * /home/name/work/rss_spider/script/./start_spider.py
         58 * * * * /home/name/work/rss_spider/script/./stop_spider.py
-
+(每个小时的0分和30分启动爬虫，28分和58分停止爬虫)
 
 ### 界面:
 
